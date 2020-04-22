@@ -16,12 +16,17 @@ button {width: 500px; height: 200px;}
 <script>
 
 function myFunction() {
+  
   var x = event.offsetX;
   var y = event.target;
+  /* this return random number bettwen 0 to 18*/
   var r = Math.floor(Math.random() * 19);
   colors = ['blue', 'green', 'white', '#2ceeaa', '#bbccee', '#ffee33',
 'orange', 'yellow', 'black', 'lightblue', 'darkblue', 'lightgray', 
 'gray', 'purple', 'tomato', 'lemon', 'red', 'lightgreen'];
+  /* once you use colors[r] to will return new color in order 
+  to know which color was and print it in the text we sotre it
+  in a var */
   var whichColor = colors[r];
   document.getElementById('demo').style.background = whichColor;
   document.querySelector("p#text").textContent = "The Selected Color Is = " + whichColor + " And X = "  + x + " Target = " + y; 
