@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<style>
+div {border:1px solid red; height:300px;}
+span {font-size:30px;}
+button {width: 500px; height: 200px;}
+</style>
+<body>
+
+
+
+<button id="demo" onclick="myFunction()">Button</button>
+
+<p id="text"></p>
+
+<script>
+
+function myFunction() {
+  var x = event.offsetX;
+  var y = event.target;
+  var r = Math.floor(Math.random() * 19);
+  colors = ['blue', 'green', 'white', '#2ceeaa', '#bbccee', '#ffee33',
+'orange', 'yellow', 'black', 'lightblue', 'darkblue', 'lightgray', 
+'gray', 'purple', 'tomato', 'lemon', 'red', 'lightgreen'];
+  var whichColor = colors[r];
+  var z = whichColor + x;
+  if (z == NaN) {
+    alert(whichColor);
+  }
+  document.getElementById('demo').style.background = whichColor;
+  document.querySelector("p#text").textContent = "The Selected Color Is = " + whichColor + " And X = "  + x + " Target = " + y; 
+
+
+  
+}
+
+
+
+</script>
+
+</body>
+</html>
