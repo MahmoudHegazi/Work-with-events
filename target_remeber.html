@@ -9,14 +9,16 @@ button {width: 500px; height: 200px;}
 
 
 
-<button id="demo" onclick="myFunction()">Button</button>
+<button id="demo">Button</button>
 
 <p id="text"></p>
 
 <script>
+let myButton = document.getElementById('demo');
 
-function myFunction() {
-  
+  // add event to target button when click on it give it random background
+  myButton.addEventListener('click', () => {
+
   var x = event.offsetX;
   var y = event.target;
   /* this return random number bettwen 0 to 18*/
@@ -33,11 +35,6 @@ function myFunction() {
 
 
   
-}
-
-
-
-</script>
-
-</body>
-</html>
+ });
+ 
+ </script>
