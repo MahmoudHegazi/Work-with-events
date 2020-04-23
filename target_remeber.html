@@ -14,6 +14,16 @@ button {width: 500px; height: 200px;}
 <p id="text"></p>
 
 <script>
+  // add Function to listen to the event 1 time only using once
+  function first_click() {
+     alert("Hello This Button Will be changed Each time you click on It \n\
+and  it will  return the event offset \nand event target and button color") 
+  }
+  
+  /* using once object = true will listen to the event 1 time only then remove it
+  no need to removeEventListener */
+  
+  document.addEventListener('click', first_click, {once : true});
   // event.keyCode return which key clicked with keypress event
   
 let myButton = document.getElementById('demo');
